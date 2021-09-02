@@ -1,0 +1,48 @@
+p{
+    color: purple;
+    text-align: left;
+    align-items: flex-start;
+    
+}
+th{
+    color:rebeccapurple;
+    text-align: left;
+    background-color: white;
+}
+tr{
+    color:purple;
+    background-color: rgb(221, 249, 250);
+}
+.input_button
+#HayvanEkle {
+    font-family: 'Times New Roman', Times, serif;
+    background-color: blue;
+    width: 70px;
+    padding: 10px;
+}
+
+.product img {
+    
+    width: 200px;
+}
+.todo-form{
+    display: flex;
+    flex-direction: row;
+   
+}
+.flex{
+    width: 300px;
+    margin:left;
+}
+.todo-list >li{
+    margin-top: 5px;
+}
+.todo-list >li >div {
+display: flex;
+flex-direction: row;
+justify-content: space-between;
+}
+
+.todo-list button{
+    margin-left: 5px;
+}
