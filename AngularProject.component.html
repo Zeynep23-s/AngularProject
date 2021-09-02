@@ -1,0 +1,217 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body {
+    -webkit-animation: colorchange 10s infinite; 
+    animation: colorchange 10s infinite;
+}
+@-webkit-keyframes colorchange {
+     0%  {background: #3c1cb1;}
+    25%  {background: #84139b;}
+    50%  {background: #cf1212;}
+    75%  {background: #d8089a;}
+    100% {background: #9B59B6;}
+}
+@keyframes colorchange {
+     0%  {background: #4910ce;}
+    25%  {background: #e95b09;}
+    50%  {background: #7a1616;}
+    75%  {background: #470230;}
+    100% {background: #9B59B6;}
+}   
+</style>
+</head>
+<body>
+</body>
+</html>
+<body>
+<div class="container">
+<div class="row">
+<div class="row-10">
+  
+  
+    
+  
+  <h2><p style="color: #3f0a29fd;">  Evcil Hayvanlar Sitesi</p></h2>s
+    
+ 
+  
+  <img src="assets/images/sj.jpg" width="500">
+  <br/> <br/>
+  <body>
+    <div class="input">
+      
+      <input #txtItem type="text" class="form-control" placeholder="Adınızı ve Evcil Hayvanınızı giriniz.." 
+      (keyup.enter)="addItem(txtItem.value)">
+      <button class="btn btn-outline-dark"(click)="addItem(txtItem.value);txtItem.value=''">Ekle</button>
+      
+       <div style="text-align: center;">
+       <h2> <span style="color:black; font-family:'Times New Roman', Times,  monospace; font-size: large;"><span style="line-height: 50px;">Sitemizden evcil hayvan mı sahiplendiniz?  İsminizi hemen listemize ekleyelim!</span></span></h2></div>
+       <br />
+        <div style="text-align: center;">
+        <span style="font-size: x-large;"><b>
+        
+     
+   
+
+        
+  
+
+  {{message}}
+
+<div>
+  
+</div>
+<body>
+  <div class="container-xxl">
+    <div class="row">
+    <div class="col-md-10">
+    
+        
+  <table class="table table-danger">
+    
+    <thead>
+
+      <tr>
+        <th style="background-color:rgb(80, 25, 37)" >Sahipleniciler ve Evcil Hayvanlar</th>
+        
+      </tr>
+    </thead>
+    <tfoot></tfoot>
+    <tbody>
+     
+      <tr *ngFor="let item of getItems(); let i=index;">
+        <td>{{item.Uyeler}}</td>
+      
+      
+      </tr>
+    </tbody>
+    <tbody>
+     
+     
+      
+    
+    </tbody>
+ 
+    
+  
+  </table>
+      </div>
+    </div>
+  </div>
+
+</body>
+<br/> <br/> 
+<div class="container">
+  <div class="row">
+    <div class="row"></div>
+      
+        <h1>Evcil Hayvanlar</h1>
+        
+       <div style="text-align: center;">
+        <h2> <span style="color:black; font-family:'Times New Roman', Times,  monospace; font-size: large; width: 50;"><span style="line-height: 1px;"></span></span></h2></div>
+        <br />
+         <div style="text-align: center;">
+         <span style="font-size: x-large;"><b>
+         
+          
+            
+           
+          
+          
+      <div *ngFor="let product of products" class="product">
+       <img [src]="product.photoPath"  [alt]="product.name">
+       
+        <div class="product-name">{{product.name}}</div>
+        <div class="quantity-bar d-flex justify-content-between align-items-center mt-2"></div>
+          <button (click)="decreaseAmount(product)" class="btn btn-danger btn-danger">-</button>
+          <span>{{product.quantity}}</span>
+          <button (click)="increaseAmount(product)" class="btn btn-danger btn-success">+</button>
+        </div>
+
+    
+       
+        <div  class="col">
+            <h4>Liste</h4>
+            <table class="table table-active" style="width: fit-content;">
+              <thead>
+                <tr>
+                  <th style="background-color: rgb(80, 25, 37);">Evcil Hayvan İsmi</th>
+                  <th style="background-color: rgb(80, 25, 37);">Adet</th>
+                </tr>
+              </thead>
+              <tbody>
+                
+              
+              </tbody>
+              <tfoot>
+                <tbody>
+                <tr class="Adet">
+                  <td colspan="2"></td>
+                  <tr *ngFor="let item of basket">
+                    <td>{{item.name}}</td>
+                    <td>{{item.quantity}}</td>
+                  </tr>
+                  <td class="text end"></td>
+              
+      
+        
+            </table>
+          </div>
+        <tbody>
+          
+        </tbody>
+    
+   
+  
+
+
+
+   
+        
+        <div class="flex">
+          <h4 style="color: darkred;">Fatih Bey'in Evcil Hayvanları</h4>
+        
+        <form class="todo-form" #f="ngForm" (ngSubmit)="onSubmit(f)"> 
+          
+            <input type="text" id="title" name="title" placeholder="Evcil Hayvan Ekleyebilirsiniz.." ngModel>
+        
+          <div>
+
+            <button type="submit" class="btn-floating waves-effect waves-light green"><i 
+              class="material-icons">add</i></button>   
+          </div>
+        </form>
+          <ul class="todo-list">
+            <li *ngFor="let todo of todos">
+               <div *ngIf="!this.todo.isComplete">
+              <div>{{this.todo.title}}</div>
+              <div>
+              <button (click)="onComplete(this.todo.id)" class="btn-floating waves-effect waves-light blue"><i class="material-icons">check</i></button>   
+              <button (click)="onDelete(this.todo.id)" class="btn-floating waves-effect waves-light red" ><i class="material-icons">delete</i></button>         
+              </div>
+               </div>
+            </li>
+           
+
+         <br>
+         <h5 style="color:darkred">Fatih Bey'in Evcil Hayvan Listesi  </h5>
+         <br>
+         <li *ngFor="let todo of todos">
+          <div *ngIf="this.todo.isComplete">
+          <div>{{this.todo.title}}</div>
+          <div>
+          <button (click)="onComplete(this.todo.id)" class="btn-floating waves-effect waves-light blue"><i class="material-icons">check</i></button>   
+          <button (click)="onDelete(this.todo.id)" class="btn-floating waves-effect waves-light red" ><i class="material-icons">delete</i></button>         
+          </div>
+          </div>
+         </li>
+          </ul>
+        </div>
+
+<toDolist></toDolist>
+
+
+  
